@@ -66,5 +66,15 @@ and non-segment) centers of `(u, id)`. Command-line syntax:
 > python all_centers.py <order> <infile>
 ```
 
-If you wish to have access to the data that were used in the experiment 
-described in our paper, please email Catalin Zara at catalin.zara@umb.edu.
+## Software Dependencies
+
+* [Python](https://www.python.org/)
+* [NumPy](http://www.numpy.org/)
+* [Matplotlib](http://matplotlib.org/)
+
+## Contact
+
+If you have any questions about the software, please email 
+swami.iyer@gmail.com. If you wish to have access to the data that were used 
+in the experiment described in our paper, please email Catalin Zara at 
+catalin.zara@umb.edu.
