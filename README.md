@@ -59,7 +59,7 @@ that `u[i] = u[j] + 1` and `v[i] + 1 = v[j]`. Command-line syntax:
 ```
 
 `all_centers.py`: This script takes the search graph of order `m` produced 
-by `search_graph.py` and for each each permutation `u`, finds all (segment 
+by `search_graph.py` and for each permutation `u`, finds all (segment 
 and non-segment) centers of `(u, id)`. Command-line syntax:
 
 ```bash

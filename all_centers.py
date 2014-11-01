@@ -1,6 +1,6 @@
 """
 This script takes the search graph of order m produced by search_graph.py and 
-for each each permutation u, finds all (segment and non-segment) 
+for each permutation u, finds all (segment and non-segment) 
 centers of (u, id).
 """
 
