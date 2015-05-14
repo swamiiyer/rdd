@@ -49,21 +49,32 @@ all the replicates.
 The bash scripts `gen_data.sh`, `complexity.sh`, and `plots.sh` are wrappers 
 for the corresponding Python scripts and are meant for batch processing.
 
-`search_graph.py`: This script generates a search graph in which the 
+`search_graph.py`: This script generates and saves a search graph in which the 
 vertices are permutations of order `m` and two permutations `u` and `v` are 
 connected by an edge if there are indices `1 <= i, j <= m` such 
 that `u[i] = u[j] + 1` and `v[i] + 1 = v[j]`. Command-line syntax:
 
 ```bash
-> python search_graph.py <order> <outfile>
+> python search_graph.py <m> <graph>
 ```
 
-`all_centers.py`: This script takes the search graph of order `m` produced 
+`all_centers.py`: This script takes the `graph` of order `m` produced 
 by `search_graph.py` and for each permutation `u`, finds all (segment 
 and non-segment) centers of `(u, id)`. Command-line syntax:
 
 ```bash
-> python all_centers.py <order> <infile>
+> python all_centers.py <m> <graph>
+```
+
+`conjecture.py`: This script takes the `graph` of order `m` produced by 
+`search_graph.py` and validates the following conjecture for small 
+permutation orders:
+
+Every connected component of a graph of all the centers of permutations 
+u and v contains at least one vertex on the segment [u, v].
+
+```bash
+> python conjecture.py <m> <graph>
 ```
 
 ## Software Dependencies
