@@ -29,20 +29,23 @@ def main(args):
         seg_centers, non_seg_centers = all_centers.find_centers(graph1, u, v)
         centers = seg_centers + non_seg_centers
         graph3 = networkx.subgraph(graph2, [str(i) for i in centers])
-        print "u = %s" %(u)
+        #print "u = %s" %(u)
         for i, cc in enumerate(networkx.connected_components(graph3)):
-            print "  component %d" %(i + 1)
+            #print "  component %d" %(i + 1)
             count, seg_count = 0, 0
             for center in centers:
                 if str(center) in cc:
                     count += 1
                     if center in seg_centers:
                         seg_count += 1
-                        print "    %s seg" %(center)
+                        #print "    %s seg" %(center)
                     else:
-                        print "    %s" %(center)
-            print "  total = %d, on seg = %d" %(count, seg_count)
-        print ""
+                        #print "    %s" %(center)
+                        pass
+            assert seg_count > 0
+            #print "  total = %d, on seg = %d" %(count, seg_count)
+        #print ""
+    print "Conjecture holds!"
 
 if __name__ == "__main__":
     main(sys.argv[1:])
